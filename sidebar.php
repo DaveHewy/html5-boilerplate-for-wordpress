@@ -5,6 +5,7 @@
  */
 ?>
 <aside id="sidebar">
+  <div class="sidebar-inner">
   <?php   /* Widgetized sidebar, if you have the plugin installed. */
       if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
 
@@ -81,5 +82,6 @@
       <?php endif; ?>
     </ul>
   </nav>
+  </div>
 </aside>
 

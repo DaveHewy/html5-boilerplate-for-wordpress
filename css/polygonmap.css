@@ -1,0 +1,10 @@
+div#main-map{
+	width:100%;
+	height:375px;
+	float:left;
+	text-align: right;
+}
+div#stats-area{
+	width: 50%;
+	margin: 10px 0 0 0;
+}

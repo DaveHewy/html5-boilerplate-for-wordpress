@@ -1,5 +1,5 @@
 /*
-Theme Name: The HTML5 Boilerplate
+Theme Name: Daves HTML5 Boilerplate
 Theme URI: http://github.com/zencoder/html5-boilerplate-for-wordpress
 Description: Based on the <a href="http://html5boilerplate.com">HTML5 Boilerplate</a> and Bruce Lawson's <a href="http://html5doctor.com/designing-a-blog-with-html5/">Designing a Blog with HTML5</a>. The sole purpose of this theme is to save developers the time it takes to apply the HTML5 Boilerplate to WordPress. See the README for instructions. The "HTML5 Boilerplate" name is used with permission from Paul Irish.
 Version: 1.0
@@ -8,14 +8,1385 @@ Author URI: http://steveheffernan.com/
 Tags: white, two-columns
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
 */
 
 /*
 HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 */
 
-/* WordPress Required Styles */
+html, body{
+	height: 100%;
+	background: url(images/body-repeat.jpg) repeat;
+}
+
+html{overflow-y:scroll;}
+
+#wrapper {min-height: 100%;}
+
+#content{
+	/* overflow-x: hidden; */  /* ffox fix */
+	/*overflow-y: auto;*/    /* ffox fix */
+	padding: 20px 0 0px 0 !important;
+}  /* must be same height as the footer */
+
+.header{
+	background: url(images/header_bg_repeat.png) repeat-x;
+	width: 100%;
+	height:652px;
+}
+.header-alt{
+	background: url(images/header-alt-repeat.png) repeat-x;
+	width: 100%;
+	height:180px;
+}
+.header_bg{
+	background: url(images/header_bg_center-v2.png) no-repeat center top;
+	width: 100%;
+	height: 652px;
+}
+.header_bg_reg_page{
+	background: url(images/header-alt.png) no-repeat center top;
+	width: 100%;
+	height:180px;
+}
+.logo{
+	display: block;
+	background: url(images/discover_solar_logo.png) no-repeat;
+	width: 327px;
+	height: 127px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 20px;
+/*
+	position: absolute;
+	top: 15px;
+	left: 80px;
+*/
+}
+#primary-nav ul.primary_nav{
+	margin-top: 60px;
+}
+#primary-nav ul.primary_nav li{
+	float: left;
+	margin-right: 10px;
+}
+#primary-nav ul.primary_nav li.last-item{
+	margin-right: 0 !important;
+}
+#primary-nav ul.primary_nav li a{
+	display: block;	
+	color: #fff;
+	font-size: 17px;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 5px 7px;
+}
+
+#primary-nav ul.primary_nav li.current_page_item, #primary-nav ul.primary_nav li.current-menu-item, #primary-nav ul.primary_nav li.current_page_parent {
+	background: #7181a5;
+	-webkit-border-radius: 5px 5px;
+	-moz-border-radius: 5px 5px;
+	border-radius: 5px 5px;
+	border: 3px solid #fff;	
+}
+#primary-nav ul.primary_nav li.current_page_item a:hover, #primary-nav ul.primary_nav li.current-menu-item a:hover,#primary-nav ul.primary_nav li.current_page_parent:hover{
+	background: #7181a5 !important;
+}
+#primary-nav ul.primary_nav li a:hover{
+	color: #f6b11c;
+}
+
+
+#homepage-content{
+	padding: 100px 0px 20px 0px;
+}
+.arrows-down{
+	width:95%;
+}
+.arrows-alt{
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+}
+
+/* Learn more arrow 
+------------------ */
+
+.learn-more-arrow{
+	background: url(images/learn-more-arrow.png) no-repeat;
+	width:150px;
+	height:126px;
+	position: absolute;
+	right: 30px;
+	top: 70px;
+}
+
+/* Slide 
+--------- */
+
+section#slide{
+	background: url(images/slide.png) no-repeat;
+	width: 960px;
+	height: 610px;
+	position: absolute;
+	top: -500px;
+}
+.slidebg{
+	position: relative;
+}
+.slidebg h1{
+	color: #fff;
+	font-size:45px;
+	text-shadow: 0px 0px 4px #6ebbd2;
+	position: absolute;
+	top: 28px;
+	left: 260px;
+}
+.slidebg h2{
+	color: #5f7096;
+	font-size: 31px;
+	text-shadow: 0px 0px 2px #fff;
+	position: absolute;
+	top: 110px;
+	right: 38px;
+	text-transform: uppercase;	
+}
+.slidebg p{
+	color: #5f7096;
+	font-size: 20px;
+	text-shadow: 0px 0px 3px #fff;
+	position: absolute;
+	top: 145px;
+	right: 47px;
+	width: 300px;
+	text-align: center;
+	line-height: 22px;
+}
+.slidebg p.earnupto{
+	color: #fff;
+	font-size: 18px;
+	line-height: 1.2;
+	text-shadow: none !important;
+	position: absolute;
+	top: 490px;
+	right: 45px;
+	width: 300px;
+	text-align: center;
+}
+.slidebg input[type="text"]{
+	position: absolute;
+	top: 220px;
+	right: 30px;
+	background: #fff;
+	border: 1px solid #80b2c3;
+	-webkit-border-radius: 10px 10px;
+	-moz-border-radius: 10px 10px;
+	-o-border-radius: 10px 10px;
+	border-radius: 10px 10px;
+	text-transform: uppercase;
+	padding: 12px 10px;
+	font-size: 24px;
+	width: 310px;
+	text-align: center;
+	-moz-box-shadow:    1px 1px 2px 1px #000;
+	-webkit-box-shadow: 1px 1px 2px 1px #000;
+	box-shadow: 1px 1px 2px 1px #86c6d9;	
+}
+.slidebg button.orange{
+	position: absolute;
+	top: 290px;
+	right: 30px;
+	-webkit-border-radius: 10px 10px;
+	-moz-border-radius: 10px 10px;
+	-o-border-radius: 10px 10px;
+	border-radius: 10px 10px;
+	padding: 12px 10px;
+	text-align: center;
+	font-size: 24px;
+	width: 332px;
+	border: 4px solid #fff;
+	font-weight: bold;
+	-moz-box-shadow:    1px 1px 2px 1px #86c6d9;
+	-webkit-box-shadow: 1px 1px 2px 1px #86c6d9;
+	box-shadow: 1px 1px 2px 1px #86c6d9;	
+}
+::-webkit-input-placeholder, :-moz-placeholder {
+   text-shadow: 0px 0px 1px #cccccc;
+}
+
+/* Calculate savings 
+-------------------- */
+
+#calculate-savings{
+	margin-top: 20px;
+}
+
+/* Inflation protected
+---------------------- */
+
+#inflation-protected{
+	padding-top: 25px;
+}
+#inflation-protected p{
+	font-size: 14px;
+}
+
+/* Frequently Asked Questions
+---------------------------- */
+
+#faq{
+	background: #fcfcfc;
+	padding: 0px 10px 10px 10px;
+	border: 1px solid #eee;
+	overflow: hidden;
+}
+#faq a.button{
+	color: #FFF;
+	font-size: 20px;
+	line-height: 1.2;
+	text-decoration: none;
+	-webkit-border-radius: 10px 10px;
+	-moz-border-radius: 10px 10px;
+	-o-border-radius: 10px 10px;
+	border-radius: 10px 10px;
+	padding: 5px 2.2%;
+	text-align: center;	
+	border: 4px solid #fff;
+	font-weight: bold;
+	-moz-box-shadow:    1px 1px 2px 1px #86c6d9;
+	-webkit-box-shadow: 1px 1px 2px 1px #86c6d9;
+	box-shadow: 1px 1px 2px 1px #ccc;	
+	width: 86.8%;
+}
+#faq a.green{
+	background: #6ABD91 !important;
+}
+#faq a.teal{
+	background: #78BED5 !important;
+}
+#faq a.green:hover, #faq a.teal:hover, #faq a.button:hover{
+	color: #eee;
+}
+
+/* Results popup formatting
+------------------------- */
+
+table.nobottommargin{
+	border-collapse: separate;
+	border-spacing: 15px 15px;
+}
+
+
+/* Results plain
+-------------- */
+
+.postcode_input {
+	height: 30px;
+	width: 100px;
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
+	color: black;
+	border: 1px solid #CCC;
+	text-transform: uppercase;
+}
+.yourpostcode{
+	background: #fcfcfc;
+	padding: 10px;
+	border: 1px solid #eee;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	width: 100%;	
+}
+.dimension_input {
+	float: left;
+	height: 30px;
+	width: 80px;
+	font-size: 106%;
+	font-weight: normal;
+	text-align: center;
+	color: black;
+	border: 1px solid #CCC;
+}
+.resultsdimensionSelect {
+	width: 80px;
+	margin-left: 10px;
+	margin-top: 7px;
+}
+.left{
+	float: left;
+}
+.padtop5{
+	padding-top: 5px;
+}
+
+
+/* Results
+--------- */
+
+p.nomarg{
+	margin: 0 !important;
+}
+.changeAssumptions{
+	float: right;
+}
+.houseimage{
+	float: left;
+	width: 10%;
+	height: 150px;
+	margin-right: 4%;
+	padding-top: 10px !important;
+}
+.house_alt{
+	padding-top: 30px !important;
+	padding-left: 2% !important;
+}
+.houseinfo{
+	float: left;
+	width: 85%;
+}
+.houseimage img{
+	max-width: 100%;
+}
+.houseinfo-wrapper{
+	overflow: hidden;
+	margin: 0 !important;
+	margin-top: 32px;
+	background: #fcfcfc;
+	padding: 10px;
+	border: 1px solid #eee;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+.nofloat{
+	float: none !important;
+}
+.house-info-left{
+	float: left;
+	width: 38%;
+}
+.house-info-right{
+	float: left;
+	width: 38%;
+}
+.house-info-dno-warning{
+	float: left;
+	width: 10%;
+	height: 80px;
+}
+.dno-warning-wrapper{
+	margin-top: 20px;
+}
+.warningarea {
+	width: 40px;
+	margin-right: 10px;
+	padding-top: 18px;
+}
+.editdetails {
+	text-align: right;
+	font-size: 81%;
+	padding: 15px 0 0 0;
+}
+.spanner {
+	background: url(images/content/spanner.jpg) no-repeat;
+	width: 15px;
+	height: 15px;
+	text-align: right;
+	float: right;
+	margin: 2px 10px 0 5px;
+}
+#sapguidelinesdiv {
+	overflow: hidden;
+	width: 650px;
+	display: none;
+}
+.assumptions {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 650px;
+	height: 600px;
+	display: none;
+}
+.calcsContainerL {
+	display: none;
+	overflow: hidden;
+	width: 600px;
+	margin: 10px 0 10px 0;
+	padding: 0 10px 0 10px;
+}
+.overallsummary {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 750px;
+	height: 600px;
+	display: none;
+}
+.progresscontainer {
+	position: relative;
+	overflow: hidden;
+	height: 170px;
+}
+.progressbarbg {
+	position: absolute;
+	top: 58px;
+	left: 13px;
+	height: 47px;
+	background: white;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.progressbar {
+	list-style-type: none;
+}
+.progressbar {
+	position: absolute;
+	margin: 0; 
+	padding: 0;
+	top: 62px;
+	left: 17px;
+	list-style-type: none;
+}
+.progress_title {
+	font-size: 13px;
+	font-weight: bold;
+	display: block;
+}
+.progressbottom {
+	position: absolute;
+	background: url(images/content/progress_bottom.png) no-repeat;
+	bottom: 6px;
+	left: 400px;
+	width: 78px;
+	height: 37px;
+	padding: 16px 5px 5px 5px;
+	text-align: center;
+	line-height: 1.3;
+}
+.progresstop {
+	position: absolute;
+	background: url(images/content/progress_top.png) no-repeat;
+	top: 0px;
+	left: 200px;
+	width: 78px;
+	height: 49px;
+	padding: 4px 5px 5px 5px;
+	text-align: center;
+	line-height: 1.3;
+}
+.progressinitial {
+	position: absolute;
+	background: url(images/content/progress_initial.png) no-repeat;
+	bottom: 6px;
+	left: 16px;
+	width: 97px;
+	height: 37px;
+	padding: 16px 5px 5px 5px;
+	text-align: center;
+	line-height: 1.3;
+}
+.progresspayback {
+	position: absolute;
+	background: url(images/content/progress_payback.png) no-repeat;
+	top: 0px;
+	width: 107px;
+	height: 49px;
+	padding: 4px 5px 5px 5px;
+	text-align: center;
+	line-height: 1.3;
+}
+.progressfinal {
+	position: absolute;
+	background: url(images/content/progress_final.png) no-repeat;
+	top: 0px;
+	width: 88px;
+	height: 49px;
+	padding: 4px 5px 5px 5px;
+	text-align: center;
+	line-height: 1.3;
+}
+.systemoptions {
+	overflow: hidden;
+	margin: 0 !important;
+	margin-top: 32px;
+	background: #fcfcfc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.seeresult {
+	overflow: hidden;
+	margin: 10px 0 0 0;
+	background: url(images/content/totalincome.jpg) no-repeat;
+	width: 100%;
+	height: 225px;
+}
+
+.breakdown{
+	float: right;
+	color: #D05C00 !important;
+	font-size: 16px;
+}
+
+#map {
+	width: 100%;
+	height: 250px;
+}
+
+/* System options 
+--------------- */
+.portraitdimensionstop {
+	overflow: hidden;
+	padding-bottom: 5px;
+	line-height: 1.3;
+}
+.orientationcontainer {
+	width:11%;
+	float: left;
+	overflow: hidden;
+	padding-left: 1.5%;
+	text-align: center;
+}
+.orientationcontainer input{
+	margin: 0px auto;
+}
+.orientationcontainer span{
+	font-size: 10px;
+	color: #999;
+	display: block;
+}
+.portraitwidthhow {
+	font-size: 11px;
+	color: #888;
+}
+.portraitwidth {
+	font-size: 11px;
+}
+.layoutviewl {
+	float: left;
+	overflow: hidden;
+	margin-left: 2%;
+	padding: 4px 0 4px 0;
+}
+.layoutviewp {
+	float: left;
+	overflow: hidden;
+	margin-left: 2%;
+	padding: 4px 0 4px 0;
+}
+.portraitview {
+	overflow: hidden;
+}
+.portraitdimensionsright {
+	overflow: hidden;
+	float: left;
+	line-height: 1.3;
+}
+.portraitheighthow {
+	font-size: 11px;
+	color: #888;
+	width: 60px;
+	text-align: center;
+}
+.portraitheight {
+	font-size: 11px;
+	text-align: center;
+}
+.systeminfol {
+	float: left;
+	overflow: hidden;
+	margin-left: 2%;
+}
+
+/* End system info */
+
+/* First year breakdown 
+--------------------- */
+
+.firstyear {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	height: 156px;	
+}
+.first-year-bg{
+	background: url(images/content/firstyear.jpg) no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.firstyearbreakdown {
+	float: left;
+	width: 72%;
+	height: 139px;
+	overflow: hidden;
+	padding: 7px 10px 10px 15px;
+}
+.firstyearbreakdown h3, .firstyeartotal h3 {
+	color: #fff !important;
+	margin: 3px 0 12px 0;
+	padding: 0;
+}
+.firstyeartotal {
+	float: right;
+	position: relative;
+	width: 24%;
+	height: 139px;
+	overflow: hidden;
+	padding: 7px 10px 10px 0px;
+}
+.detailscontainer_larger {
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 38%;
+	height: 83px;
+}
+.detailscontainer_middle {
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 32%;
+	height: 83px;
+}
+.detailscontainer {
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 28%;
+	height: 83px;
+}
+.feedinicon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(images/content/feedinicon.jpg) no-repeat;
+	width: 41px;
+	height: 42px;
+}
+.exporticon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(images/content/exporticon.jpg) no-repeat;
+	width: 41px;
+	height: 42px;
+}
+.electricityicon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(images/content/electricityicon.jpg) no-repeat;
+	width: 41px;
+	height: 42px;
+}
+.totalfirstyear {
+	position: absolute;
+	top: 57px;
+	left: 5px;
+	background: url(images/content/totalicon.jpg) no-repeat;
+	width: 41px;
+	height: 44px;
+}
+.totalfirstyearincome {
+	position: absolute;
+	top: 57px;
+	left: 52px;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+}
+.seecalculations {
+	position: absolute;
+	bottom: 15px;
+	right: 25px;
+}
+.displayCalcsL, .displayCalcsP {
+	color: #F3F3F3 !important;
+	font-size: 14px !important;
+}
+.firstyeartext {
+	font-size: 14px;
+	line-height: 1.4;
+	margin: 0 0 0 51px;
+	color: white;
+}
+.electricitypad {
+	margin-top: 10px;
+}
+.firstyearamount {
+	width: 100%;
+	margin: 5px 0 0 51px;
+	font-size:26px;
+	font-weight: bold;
+	color: white;
+}
+.firstyearamount_extra {
+	width: 100%;
+	margin: 16px 0 0 51px;
+	font-size:26px;
+	font-weight: bold;
+	color: white;
+}
+
+/* Payback period
+---------------- */
+
+.paybackcontainer {
+	float: left;
+	width: 72%;
+	height: 208px;
+	overflow: hidden;
+	padding: 0px 10px 10px 15px;
+}
+.paybackcontainer h3{
+	margin: 0 0 10px 0 !important;
+}
+.totalprofitcontainer p{
+	margin: 5px 0px !important;
+}
+.paybacktime {
+	font-size: 18px;
+	font-weight: bold;
+}
+.overallprofit {
+	font-size: 30px;
+	font-weight: bold;
+	padding: 5px 0 15px 0;
+}
+.green {
+	color: #5EA033 !important;
+}
+
+/* find-property
+--------------- */
+
+#find-property{
+	background: #fcfcfc;
+	padding: 0px 10px 10px 10px;
+	border: 1px solid #eee;
+	overflow: hidden;	
+	margin-bottom: 20px;
+}
+
+/* How to use 
+-------------- */
+
+#how-to-use-roof-calc{
+	background: #fcfcfc;
+	padding: 0px 10px 10px 10px;
+	border: 1px solid #eee;
+	overflow: hidden;
+	margin-bottom: 25px;
+	overflow: hidden;
+}
+.calc_visual_1, .calc_visual_2, .calc_visual_3{
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+.calc_visual_2, .calc_visual_3{
+	display: none;
+}
+.calculatorstep{
+	margin: 10px 0 15px 0;
+	font-weight: bold;
+	font-size: 14px;
+}
+.stepawaiting {
+	color: #CCC;
+}
+.calculatorvisual {
+	position: relative;
+	float: left;
+	width: 15%;
+	height: 125px;
+}
+.calculatorinstructions {
+	float: left;
+	width: 80%;
+	margin: 10px 0 0 0;
+}
+.calculatorticks {
+	position: relative;
+	float: left;
+	width: 5%;
+	margin: 10px 0 0 0;
+	height: 115px;
+}
+#skipstep{
+	overflow: hidden;
+	width: 450px;
+	height: 200px;
+	display: none;
+}
+.calc-info{
+	overflow: hidden;
+	margin-top: 20px;
+}
+/* Solar info
+------------- */
+
+#solarinfo p{
+	font-size: 14px;
+}
+
+
+/* Income estimation
+------------------- */
+
+ul.income-stepper{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+ul.income-stepper li{
+	float: left;
+	width: 24.9%;
+	text-align: center;
+	display: block;
+	background: #59688C;
+	color: #fff;
+	font-size: 14px;
+	padding: 8px 0px;
+	border-right: 1px solid #ddd;
+	position: relative;
+}
+ul.income-stepper li a{
+	text-decoration: none;
+	color: #FFF;
+}
+ul.income-stepper li a:hover{
+	text-decoration: underline !important;
+}
+ul.income-stepper li.current{
+	background: #F7AF3E !important;
+}
+ul.income-stepper li.done{
+	background: #85C9A5 !important;
+}
+ul.income-stepper li span.num{
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	left: 15px;
+	top: 4px;
+}
+ul.income-stepper li.first{
+	-webkit-border-bottom-left-radius: 5px 5px;
+	-webkit-border-top-left-radius: 5px 5px;
+	-moz-border-radius-bottomleft: 5px 5px;
+	-moz-border-radius-topleft: 5px 5px;
+	border-bottom-left-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+}
+ul.income-stepper li.last{
+	border-right: none !important;
+	-webkit-border-bottom-right-radius: 5px 5px;
+	-webkit-border-top-right-radius: 5px 5px;
+	-moz-border-radius-bottomright: 5px 5px;
+	-moz-border-radius-topright: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+}
+
+
+/* Footer styling
+--------------- */
+
+#footer{
+	position: relative;
+	height: 410px;
+	clear:both;
+	width: 100%;
+	background: url(images/footer-header-repeat.png) repeat-x top;
+	overflow: hidden;
+	padding-top: 175px;
+}
+.footer-content{
+	overflow: hidden;
+	background: url(images/footer-content-repeat.png) repeat;
+	padding-bottom: 20px;
+}
+.footer-prop{
+	overflow: hidden;
+	background: url(images/footer-prop.png) repeat;	
+	padding: 15px 0px;
+	text-align: center;
+}
+article#latest_posts article.posts{
+	background: url(images/light-bulb.png) no-repeat top left;
+	padding: 7px 0px 7px 40px;
+	margin-bottom: 5px;
+}
+article#latest_posts article.posts a{
+	color: #fff;
+	text-decoration: none;
+}
+article#latest_posts article.posts a:hover{
+	text-decoration: underline;
+}
+footer div.social-media ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+footer div.social-media ul li{
+	float: left; 
+	margin-right: 11px;
+}
+footer div.social-media ul li a{
+	display: inline-block;
+	height: 65px;
+	width: 60px;	
+	background: url(images/social-media.png) no-repeat;
+}
+footer div.social-media ul li a.latest-tweet{
+	background-position: 0px 0px;
+}
+footer div.social-media ul li a.twitter{
+	background-position: -82px 0px;
+}
+footer div.social-media ul li a.facebook{
+	background-position: -161px 0px;
+}
+footer div.social-media ul li a.rss{
+	background-position: -241px 0px;
+}
+footer div.social-media ul li a.latest-tweet:hover,
+footer div.social-media ul li a.twitter:hover,
+footer div.social-media ul li a.facebook:hover,
+footer div.social-media ul li a.rss:hover{
+	opacity: 0.8;
+}
+footer article#twitter{
+	background: #85c9a5;
+	width: 70%;
+	-webkit-border-radius: 10px 10px;
+	-moz-border-radius: 10px 10px;
+	-o-border-radius: 10px 10px;
+	border-radius: 10px 10px;
+	padding: 10px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	color: #fff;
+}
+footer article#twitter > strong{
+	font-size: 18px;
+	font-weight: bold;
+}
+footer article#twitter > p{
+	padding: 10px 0;
+}
+nav#footer_nav ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+nav#footer_nav ul li{
+	color: #fff;
+	display: block;
+	text-align: center;
+}
+#madebybytewire{
+	position: absolute;
+	right: 20px;
+	top: 5px;
+}
+
+/* --  End footer stylings -- */
+
+/* Basic formatting settings
+-------------------------- */
+
+#content p{
+	margin: 20px 0px;
+}
+
+/* Single Post 
+------------- */
+
+article#post{
+	float: left;
+}
+
+article#post img{
+	max-width: 100%;
+}
+.wp-caption img{
+	max-width: 100%;
+}
+textarea#comment{
+	max-width: 100%;
+}
+
+/* Blog loop
+----------- */
+
+.blog-loop article.post{
+	padding-top: 15px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #DDDDDD;
+}
+.blog-loop article footer{
+	padding-top: 20px;
+}
+
+/* Sidebar 
+---------- */
+
+aside#sidebar{
+	background: #FCFCFC;
+	border: 1px solid #EEEEEE;
+	float: right;
+}
+.sidebar-inner{
+	padding: 15px;
+}
+aside#sidebar ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+aside#sidebar ul li a{
+	text-decoration: none !important;
+}
+
+/* Table 
+-------- */
+.example-install-table{
+	border-collapse: separate;
+	border-spacing: 3px 20px;
+}
+
+.example-install-table th{
+	font-size: 13px;
+}
+
+.example-install-table td{
+	font-size: 14px;
+}
+
+
+/* Lists 
+-------- */
+
+ul.tree-list, ul.pound-list, ul.light-bulb{
+	list-style-type: none;	
+	margin:0;
+	padding: 0;
+}
+ul.pound-list li{
+	background-image: url(images/pound-sign.png);
+	background-repeat: no-repeat;
+	background-position: 0 .2em;
+	line-height: 3.2;
+	padding-left: 40px;
+	font-size: 14px;
+}
+ul.tree-list li{
+	background-image: url(images/tree-list.png);
+	background-repeat: no-repeat;
+	background-position: 0 .2em;
+	line-height: 3.2;
+	padding-left: 40px;
+	font-size: 14px;
+}
+ul.light-bulb li{
+	background-image: url(images/light-bulb-list.png);
+	background-repeat: no-repeat;
+	background-position: 0 !important;
+	line-height: 3.2;
+	padding-left: 45px;
+	font-size: 14px;
+}
+
+/* Headings
+----------- */
+h1{
+	font-size: 32px;
+}
+h2{
+	font-size: 26px;
+	text-shadow: 0px 0px 1px #fff;
+	margin: 10px 0px;
+	padding: 0;
+	color: #59678C !important;
+}
+h2.adv{
+	font-size: 34px !important;
+	line-height: 1.2 !important;
+	margin-bottom: 25px;
+}
+h2.post-loop{
+	font-size: 24px;
+	text-decoration: none !important;
+}
+h2.post-loop a{
+	text-decoration: none !important;
+}
+h3{
+	font-size: 18px;
+	text-shadow: 0px 0px 1px #fff;
+	margin: 10px 0px;
+	color: #f7ae3e !important;
+}
+h3.black{
+	color: #000 !important;
+}
+h3.navy{
+	font-size: 26px;
+	color: #59678C !important;
+}
+h3.light-blue{
+	font-size: 40px;
+	line-height: 1.2 !important;
+	color: #78BED5 !important;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 1px #fff;
+}
+h3.small-line{
+	line-height: 1.2 !important;
+}
+h3.env{
+	color: #5FB887 !important;
+	text-transform: uppercase;
+	font-size: 32px;
+}
+h3.save{
+	color: #F7AF3E !important;
+	text-transform: uppercase;
+	font-size: 32px;
+}
+h3.make{
+	color: #78BED5 !important;
+	text-transform: uppercase;
+	font-size: 32px;
+}
+h3.system {
+	font-size: 14px;
+	color: #000000 !important;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+h3.systemprice{
+	font-size: 16px;
+	color: #000000 !important;
+	font-weight: bold;
+	margin: 7px 0 0 0;
+	padding: 0;
+	line-height: 1.5;	
+}
+h4{
+	color: #5FB887 !important;
+	font-size: 20px;
+	margin: 15px 0px 0px 0px;
+}
+h4.footerhead{
+	font-family: "caflisch-script-pro", sans-serif;
+	font-size: 38px;
+	color: #fff !important;
+	margin-top: 0 !important;
+}
+h1.no-margin, h2.no-margin, h3.no-margin, h4.no-margin{
+	margin-top: 0 !important;
+}
+h1.text-center, h2.text-center, h3.text-center, h4.text-center{
+	text-align: center;
+}
+
+/* Button stylings 
+---------------- */
+
+.button{
+	display: block;
+	padding: 5px 5px;
+	-webkit-border-radius: 5px 5px;
+	-moz-border-radius: 5px 5px;
+	-o-border-radius: 5px 5px;
+	border-radius: 5px 5px;
+}
+.orange{
+	background: #f7af3e;
+	border: 2px solid #fff;
+	color: #fff;
+}
+.homepage-button{
+	-webkit-border-radius: 15px 15px;
+	-moz-border-radius: 15px 15px;
+	-o-border-radius: 15px 15px;
+	border-radius: 15px 15px;
+	padding: 12px 0.2%;
+	text-align: center;
+	font-size: 24px;
+	border: 4px solid #fff;
+	font-weight: bold;
+	-moz-box-shadow:    1px 1px 2px 1px #86c6d9;
+	-webkit-box-shadow: 1px 1px 2px 1px #86c6d9;
+	box-shadow: 1px 1px 2px 1px #ddd;	
+	width: 72%;
+	margin: 10px auto;
+}
+button.small{
+	width: 100% !important;
+}
+
+/* buttons
+---------- */
+
+.calculatesubmit {
+	margin-top:20px;
+	margin-bottom: 10px;
+	display: block;
+	background: url(images/content/calculate.jpg) 0 0 no-repeat;
+	width: 152px;
+	height: 39px;
+	font-size:14px;
+	text-align: center;
+	border: none;
+	overflow: visible;
+	color: white;
+	cursor: pointer;
+	text-shadow: 0px 1px 0px #222;
+	outline: none;
+}
+.searchsubmit_assumptions{
+	background: url(images/content/search_postcode.jpg) 0 0 no-repeat;
+	width: 107px;
+	height: 46px;
+	font-size:14px;
+	padding: 1px 0 0 20px;
+	text-align: left;
+	border: none;
+	overflow: visible;
+	color: white;
+	cursor: pointer;
+	text-shadow: 0px 1px 0px #222;
+	outline: none;
+}
+.searchsubmit{
+	background: url(images/content/search_postcode.jpg) 0 0 no-repeat;
+	width: 107px;
+	height: 46px;
+	font-size:14px;
+	padding: 1px 0 0 25px;
+	text-align: left;
+	border: none;
+	overflow: visible;
+	color: white;
+	cursor: pointer;
+	text-shadow: 0px 1px 0px #222;
+	outline: none;
+}
+.searchsubmit:hover, .searchsubmit_assumptions:hover{
+	background: url(images/content/search_postcode_over.jpg) 0 0 no-repeat;
+}
+.resetsubmit {
+	background: url(images/content/reset_tool.jpg) 0 0 no-repeat;
+	width: 109px;
+	height: 44px;
+	font-size:14px;
+	padding-bottom: 2px;
+	text-align: center;
+	border: none;
+	overflow: visible;
+	color: white;
+	cursor: pointer;
+	text-shadow: 0px 0px 1px #222;
+	outline: none;
+}
+.resetsubmit:hover{
+	background: url(images/content/reset_tool_over.jpg) 0 0 no-repeat;
+}
+.estimatesubmit {
+	background: url(images/content/estimate_income.jpg) 0 0 no-repeat;
+	width: 157px;
+	height: 44px;
+	padding-bottom: 2px;
+	font-size:14px;
+	text-align: center;
+	border: none;
+	overflow: visible;
+	color: white;
+	cursor: pointer;
+	text-shadow: 0px 0px 1px #222;
+	outline: none;
+}
+.estimatesubmit:hover{
+	background: url(images/content/estimate_income_over.jpg) 0 0 no-repeat;
+}
+
+/* Input
+-------- */
+
+input.homepage-input{
+	display: block;
+	background: #fff;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 15px 15px;
+	-moz-border-radius: 15px 15px;
+	-o-border-radius: 15px 15px;
+	border-radius: 15px 15px;
+	text-transform: uppercase;
+	padding: 12px 2.2%;
+	font-size: 24px;
+	width: 303.8px;
+	text-align: center;
+	-moz-box-shadow:    1px 1px 2px 1px #000;
+	-webkit-box-shadow: 1px 1px 2px 1px #000;
+	box-shadow: 1px 1px 5px 1px #eee;
+	margin: 0px auto;	
+}
+input.small{
+	width:95.6% !important;
+	font-size: 20px !important;
+}
+.slidebg input[type="text"]{
+	position: absolute;
+	top: 220px;
+	right: 30px;
+	background: #fff;
+	border: 1px solid #80b2c3;
+	-webkit-border-radius: 10px 10px;
+	-moz-border-radius: 10px 10px;
+	-o-border-radius: 10px 10px;
+	border-radius: 10px 10px;
+	text-transform: uppercase;
+	padding: 12px 10px;
+	font-size: 24px;
+	width: 310px;
+	text-align: center;
+	-moz-box-shadow:    1px 1px 2px 1px #000;
+	-webkit-box-shadow: 1px 1px 2px 1px #000;
+	box-shadow: 1px 1px 2px 1px #86c6d9;	
+}
+.alt_homepage_input_black{
+	height: 37px;
+	width: 160px;
+	font-size: 106%;
+	font-weight: normal;
+	text-align: center;
+	color: #000000;
+	border: 1px solid #ccc;
+	text-transform: uppercase;
+}
+
+/* WordPress Required Styles
+-------------------------- */
+.text-center{text-align: center;}
+.rel{ position: relative;}
+.ovfl{overflow:hidden;}
 .aligncenter {
 	display: block;
 	margin-left: auto;
@@ -24,10 +1395,16 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 
 .alignleft {
 	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-top: 15px;
 }
 
 .alignright {
 	float: right;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	margin-top: 15px;	
 }
 
 .wp-caption {
@@ -35,7 +1412,7 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 	text-align: center;
 	background-color: #f3f3f3;
 	padding-top: 4px;
-	margin: 10px;
+	margin: 5px;
 	-moz-border-radius: 3px;
 	-khtml-border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -62,4 +1439,44 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 	
 .sticky h2 {
 	padding-top: 10px;
+}
+p.larger{
+	font-size: 14px;
+}
+
+/* Simple Modal */
+#simplemodal-container a.modalCloseImg {
+	background:url(images/x.png) no-repeat; /* adjust url as required */
+	width:25px;
+	height:29px;
+	display:inline;
+	z-index:3200;
+	position:absolute;
+	top:-15px;
+	right:-18px;
+	cursor:pointer;
+}
+#simplemodal-overlay {
+	background-color:#000;
+}
+#simplemodal-container {
+	background-color:#FFF;
+	border:8px solid #444;
+	padding:12px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.normal{
+	padding: 8px;
+	width: 80px !important;
+	border: 1px solid #CCC;
+	font-size: 100%;
+	background: white url(images/input.gif) 0 0 repeat-x;
+}
+.mini{
+	padding: 4px;
+	width: 50px !important;
+	border: 1px solid #CCC;
+	font-size: 87%;
+	background: white url(images/input.gif) 0 0 repeat-x;
 }

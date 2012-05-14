@@ -4,17 +4,65 @@
  * @subpackage HTML5_Boilerplate
  */
 ?>
+	
+	</section><!-- end #content -->
 
-  <footer>
-      <p>
-        <?php bloginfo('name'); ?> is proudly powered by
-        <a href="http://wordpress.org/">WordPress</a>, and built using the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.
-        <br /><a href="<?php bloginfo('rss2_url'); ?>">Entries (RSS)</a>
-        and <a href="<?php bloginfo('comments_rss2_url'); ?>">Comments (RSS)</a>.
-        <!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->
-      </p>
-  </footer>
-</div> <!--! end of #container -->
+	</div> <!--! end of #wrapper -->
+
+	<footer id="footer">
+		
+		<div class="footer-content">
+		
+	  	<div class="container">
+	  	
+	  		<div class="column seven">
+	  			
+	  			<h4 class="footerhead">From the blog</h4>
+	  			
+	  			<article id="latest_posts">
+		  			<?php
+					$args = array( 'numberposts' => 6);
+					$lastposts = get_posts( $args );
+					foreach($lastposts as $post) : setup_postdata($post); ?>
+						<article class="posts"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></article>
+					<?php endforeach; ?> 			
+	  			</article>
+	
+	  		</div>
+	  		
+		  	<div class="social-media column five push-2">
+		  		<article id="twitter">
+		  			<strong>Twitter</strong>
+					<p>Etiam porta sem malesuada magna mollis euismod.</p>
+		  		</article>
+		  		<ul>
+		  			<li><a href="#" class="latest-tweet"></a></li>
+		  			<li><a href="http://twitter.com/DiscoverSolar" title="Follow Discover Solar on Twitter" class="twitter"></a></li>
+		  			<li><a href="http://www.facebook.com/DiscoverSolar" title="Like Discover Solar on Facebook" class="facebook"></a></li>
+		  			<li><a href="<?php bloginfo('url');?>/feed/" title="Read Discover Solar's Feed" class="rss"></a></li>
+		  		</ul>
+		  	</div>
+	  	
+	  	</div>
+		
+		</div>
+		
+		<div class="footer-prop">
+			<div class="container">
+		  		<nav id="footer_nav" class="column twelve text-center">
+					<ul>
+						<li>&copy; Copyright Green Energy Software Solutions</li>
+					</ul>
+				</nav>
+				<div id="madebybytewire">
+					<a href="http://www.bytewire.co.uk/" title="Web Design Essex" target="_blank">Web design essex</a>
+				</div>
+			</div>
+		</div>
+	  
+	</footer>
+  
+
 
   <!-- Javascript at the bottom for fast page loading -->
 
@@ -22,10 +70,8 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script>!window.jQuery && document.write('<script src="<?php echo $GLOBALS["TEMPLATE_RELATIVE_URL"] ?>html5-boilerplate/js/jquery-1.4.2.min.js"><\/script>')</script>
 
-
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/plugins.js") ?>
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/script.js") ?>
-
 
   <!--[if lt IE 7 ]>
     <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/dd_belatedpng.js") ?>

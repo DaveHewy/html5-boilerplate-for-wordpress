@@ -1,0 +1,58 @@
+.alt_homepage_input{
+	height: 19px;
+	width: 160px;
+	font-size: 17px;
+	font-weight: normal;
+	padding: 9px 0;
+	text-align: center;
+	color: #bebebe;
+	border: 1px solid #ccc;
+	text-transform: uppercase;
+}
+.homepage_input{
+	height: 19px;
+	width: 160px;
+	font-size: 17px;
+	color: #000;
+	padding: 9px 0;
+	text-transform: uppercase;
+	text-align: center;
+	border: 1px solid #ccc;
+}
+.alt_homepage_input_black{
+	height: 19px;
+	width: 160px;
+	font-size: 17px;
+	font-weight: normal;
+	padding: 9px 0;
+	text-align: center;
+	color: #000000;
+	border: 1px solid #ccc;
+	text-transform: uppercase;
+}
+
+.postcode_input{
+	padding: 5px 3px;
+	width: 120px;
+	font-size: 16px;
+	line-height: 20px;
+	height:auto !important;
+	font-weight: normal;
+	text-align: center;
+	color: #000000;
+	border: 1px solid #ccc;
+	text-transform: uppercase;
+}
+
+.dimension_input{
+	float: left;
+	padding: 5px 3px;
+	width: 70px;
+	height:auto !important;
+	font-size: 16px;
+	line-height: 20px;	
+	font-weight: normal;
+	text-align: center;
+	color: #000000;
+	border: 1px solid #ccc;
+}

@@ -10,6 +10,10 @@ get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+<div class="container">
+
+ <div id="col-1" class="column eight blog-single">
+	
   <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
     <header>
       <h2><?php the_title(); ?></a></h2>
@@ -51,6 +55,13 @@ get_header(); ?>
     <?php comments_template(); ?>
 
   </article>
+  
+  </div>
+  <div id="col-2" class="column three push-1">
+  	<?php get_sidebar(); ?>
+  </div>
+
+</div>
 
 <?php endwhile; else: ?>
 

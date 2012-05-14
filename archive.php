@@ -8,6 +8,10 @@ get_header(); ?>
 
 <div id="main" role="main">
 
+<div class="container">
+
+ <div id="col-1" class="column eight">
+
   <?php if (have_posts()) : ?>
 
   <section>
@@ -73,7 +77,12 @@ get_header(); ?>
   ?>
 
 </div>
+</div>
 
-<?php get_sidebar(); ?>
+  <div id="col-2" class="column three push-1">
+  	<?php get_sidebar(); ?>
+  </div>
+
+</div>
 
 <?php get_footer(); ?>

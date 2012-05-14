@@ -4,6 +4,7 @@
  * @subpackage HTML5_Boilerplate
  */
 
+
 // Custom HTML5 Comment Markup
 function mytheme_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
@@ -67,3 +68,38 @@ function versioned_resource($relative_url){
 
   return $relative_url.$file_version;
 }
+
+
+add_shortcode('wp_caption', 'fixed_img_caption_shortcode');
+add_shortcode('caption', 'fixed_img_caption_shortcode');
+function fixed_img_caption_shortcode($attr, $content = null) {
+	// Allow plugins/themes to override the default caption template.
+	$output = apply_filters('img_caption_shortcode', '', $attr, $content);
+	if ( $output != '' ) return $output;
+	extract(shortcode_atts(array(
+		'id'=> '',
+		'align'	=> 'alignnone',
+		'width'	=> '',
+		'caption' => ''), $attr));
+	if ( 1 > (int) $width || empty($caption) )
+	return $content;
+	if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
+	return '<div ' . $id . 'class="wp-caption ' . esc_attr($align)
+	. '">'
+	. do_shortcode( $content ) . '<p class="wp-caption-text">'
+	. $caption . '</p></div>';
+}
+
+if(!function_exists('ds_output_stepper')):
+	function ds_output_stepper($current,$postcode=false){
+	
+		$html = '<ul class="income-stepper">';
+		$html.= '<li class="first'; if($current==1): $html.=' current'; endif; if($current>1): $html.=' done'; endif; $html.= '"><span class="num">1.</span><a href="'.get_bloginfo('url').'/roof-calculator/">'.__("Find your property").'</a></li>';
+		$html.= '<li'; if($current==2): $html.=' class="current"'; endif; if($current>2 && $current!=2): $html.=' class="done"'; endif; $html.= '><span class="num">2.</span><a href="'.get_bloginfo('url').'/roof-calculator/'; if($postcode): $html.= '?postcode='.urlencode($postcode); endif; $html.= '">'.__("Draw your roof").'</a></li>';
+		$html.= '<li'; if($current==3): $html.=' class="current"'; endif; if($current>3 && $current!=3): $html.=' class="done"'; endif; $html.= '><span class="num">3.</span><a href="'.get_bloginfo('url').'/results/">'.__("Your estimation").'</a></li>';
+		$html.= '<li class="last'; if($current==4): $html.=' current'; endif; $html.= '"><span class="num">4.</span><a href="#">'.__("Confirmation").'</a></li>';
+		$html.= '</ul>';
+		echo $html;
+
+	}
+endif;
